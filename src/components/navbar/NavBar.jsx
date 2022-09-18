@@ -1,9 +1,8 @@
 import React from "react";
 import Nav from "./Nav";
-import Notifications from "./Notifications";
-import Profile from "./Profile";
 import MenuMobile from "./MenuMobile";
 import MenuMobileButton from "./MenuMobileButton";
+import ProfileSection from "./ProfileSection";
 
 const NavBar = () => {
 	return (
@@ -17,13 +16,8 @@ const NavBar = () => {
 					{/* nav */}
 					<Nav />
 
-					<div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-						{/* notifications */}
-						<Notifications />
-
-						{/* Profile dropdown */}
-						<Profile />
-					</div>
+					{/* Profile Section */}
+					<ProfileSection />
 				</div>
 			</div>
 			{/* Mobile menu, show/hide based on menu state. */}

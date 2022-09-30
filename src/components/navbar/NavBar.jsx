@@ -4,7 +4,7 @@ import MenuMobile from "./MenuMobile";
 import MenuMobileButton from "./MenuMobileButton";
 import ProfileSection from "./ProfileSection";
 
-const NavBar = () => {
+const NavBar = ({ modalProfile, setModalProfile }) => {
 	return (
 		<nav className="bg-gray-800 absolute w-full">
 			<div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -17,7 +17,7 @@ const NavBar = () => {
 					<Nav />
 
 					{/* Profile Section */}
-					<ProfileSection />
+					<ProfileSection modalProfile={modalProfile} setModalProfile={setModalProfile}/>
 				</div>
 			</div>
 			{/* Mobile menu, show/hide based on menu state. */}

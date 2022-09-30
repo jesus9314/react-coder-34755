@@ -1,8 +1,15 @@
 import React from "react";
 
-const Sort = () => {
+const Sort = ({show, setShow}) => {
+	const handleButton = () =>{
+		if(show === 'hidden'){
+			setShow('')
+		}else{
+			setShow('hidden')
+		}
+	}
 	return (
-		<button type="button" className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900" id="menu-button" aria-expanded="false" aria-haspopup="true">
+		<button onClick={() => handleButton()} type="button" className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900" id="menu-button" aria-expanded="false" aria-haspopup="true">
 			Sort
 			{/* Heroicon name: mini/chevron-down */}
 			<svg className="-mr-1 ml-1 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">

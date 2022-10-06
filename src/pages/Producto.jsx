@@ -12,7 +12,7 @@ const Producto = () => {
 		};
 		getProducto();
 	}, []);
-	const {idProducto, title, price, category, description,image} = producto
+	const {title, price, description,image} = producto
 	return (
 
 			<div className="inset-0 z-10 overflow-y-auto pt-20">

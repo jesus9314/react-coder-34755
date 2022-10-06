@@ -1,11 +1,11 @@
-import React from "react";
+import {Link} from "react-router-dom";
 
-const ItemCategory = ({children}) => {
+const ItemCategory = ({children, category}) => {
 	return (
 		<li>
-			<a href="/#" className="block px-2 py-3 hover:bg-gray-200 rounded transition capitalize">
+			<Link to={`/categoria/${category}`} className="block px-2 py-3 hover:bg-gray-200 rounded transition capitalize">
 				{children}
-			</a>
+			</Link>
 		</li>
 	);
 };

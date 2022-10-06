@@ -17,7 +17,7 @@ const Categories = () => {
 	return (
 		<ul className="px-2 py-3 font-medium text-gray-900">
 			{categories2.map((category, index) => (
-				<ItemCategory key={index}>{category}</ItemCategory>
+				<ItemCategory key={index} category={category}>{category}</ItemCategory>
 			))}
 		</ul>
 	);

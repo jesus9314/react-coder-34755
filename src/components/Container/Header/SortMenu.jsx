@@ -5,7 +5,7 @@ const SortMenu = ({ show, productos, setProductos, page, setPage }) => {
 		const data = await response.json();
 		const newData = data.filter((d) => d.rating.rate > 4);
 		setProductos(newData);
-		setPage(1)
+		// setPage(1)
 	};
 
 	const lowerToHigh = async () => {
@@ -14,7 +14,7 @@ const SortMenu = ({ show, productos, setProductos, page, setPage }) => {
 		const newData = data.sort((a, b) => a.price - b.price);
 		console.log(newData);
 		setProductos(newData);
-		setPage(1)
+		// setPage(1)
 	};
 	const highToLower = async () => {
 		const response = await fetch("https://fakestoreapi.com/products");
@@ -22,7 +22,7 @@ const SortMenu = ({ show, productos, setProductos, page, setPage }) => {
 		const newData = data.sort((a, b) =>  b.price - a.price);
 		console.log(newData);
 		setProductos(newData);
-		setPage(1)
+		// setPage(1)
 	};
 
 	return (

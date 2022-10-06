@@ -1,10 +1,10 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
-const NavLinkActive = ({children}) => {
+const NavLinkActive = ({ children, link }) => {
 	return (
-		<a href="/#" className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">
+		<Link to={link} className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium capitalize" aria-current="page">
 			{children}
-		</a>
+		</Link>
 	);
 };
 

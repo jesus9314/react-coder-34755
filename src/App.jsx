@@ -1,23 +1,22 @@
-import { useState } from "react";
+import Home from "./pages/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/navbar/NavBar";
-import Container from "./components/Container/Container";
+import Producto from "./pages/Producto";
+import { useState } from "react";
+import Categoria from "./pages/Categoria";
 
 const App = () => {
 	const [modalProfile, setModalProfile] = useState("hidden");
-	const [ show, setShow] = useState('hidden');
-	const closeAll = () => {
-		if(modalProfile === ''){
-			setModalProfile('hidden')
-		}
-		if(show === ''){
-			setShow('hidden')
-		}
-	};
+
 	return (
-		<main onClick={() => closeAll()}>
-			<NavBar modalProfile={modalProfile} setModalProfile={setModalProfile} />
-			<Container show={show} setShow={setShow}/>
-		</main>
+		<BrowserRouter>
+			<NavBar modalProfile={modalProfile} setModalProfile={setModalProfile}/>
+			<Routes>
+				<Route path="/" element={<Home/>} />
+				<Route path="/producto/:id" element={<Producto/>}/>
+				<Route path="/categoria/:categoria" element={<Categoria />} />
+			</Routes>
+		</BrowserRouter>
 	);
 };
 

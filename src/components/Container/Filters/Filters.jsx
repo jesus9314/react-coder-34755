@@ -7,7 +7,6 @@ const Filters = ({ classes }) => {
 		<form className={classes}>
 			<h3 className="sr-only">Categories</h3>
 			<Categories/>
-			<ExpandableSection/>
 		</form>
 	);
 };
